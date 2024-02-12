@@ -22,9 +22,13 @@ x--;
 Console.WriteLine(x); // x = 5
 
 if (true) /*biz burada bir boolean dəyəri alırıq və onun əsasında bu bloka daxil oluruq və ya olmuruğ*/
-{
+{ // bu { kodun başladığı hissədir
 
-}else if (true) // bu bloka yuxarıdakı if blokuna daxil olmasaq bura daxil olacayığ
+    int myValue = 5;
+    // bu blokdan çıxdığdan sonra myValue dəişənini aşağıdakı bloklarda görə bilməyəcəyik
+
+} // bu } kodun bitdiyi hissə
+else if (true) // bu bloka yuxarıdakı if blokuna daxil olmasaq bura daxil olacayığ
 {
 
 }
@@ -52,7 +56,7 @@ if (int.TryParse(input,out int checkNumber))
 }
 else
 {
-    /* bu bloka rəqəm əvəzi hərif yazılsa parse edə bimıyəcək number type 
-     və false alıb bura daxill olacayığ */
+    /* yuxarıdakı input'a rəqəm əvəzi hərif yazılsa parse edə bimıyəcək, TryParse false return edəcək
+     * və biz bu else blokunun içinə daxil olacayığ */
 }
 
