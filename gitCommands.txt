@@ -1,3 +1,4 @@
+-- İlk dəfə repository yaradanda , əsasən özü bildirir bu kodları , git add . etməyi ancaq unutmayın --
 git init
 git add .
 git commit -m "first commit"
@@ -6,6 +7,9 @@ git remote add origin -- ilk dəfə repo yaradanda verdiyi remote ünvan
 git push -u origin main
 
 -- 
+
+
+-- artıq repository varsa onu hər dəfə editləyəndə bu komandalardan istifadə edin --
 
 git status 
 git add .
