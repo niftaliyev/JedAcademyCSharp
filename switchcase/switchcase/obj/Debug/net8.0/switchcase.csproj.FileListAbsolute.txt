@@ -1,0 +1,15 @@
+D:\JedAcademyCSharp\switchcase\switchcase\bin\Debug\net8.0\switchcase.exe
+D:\JedAcademyCSharp\switchcase\switchcase\bin\Debug\net8.0\switchcase.deps.json
+D:\JedAcademyCSharp\switchcase\switchcase\bin\Debug\net8.0\switchcase.runtimeconfig.json
+D:\JedAcademyCSharp\switchcase\switchcase\bin\Debug\net8.0\switchcase.dll
+D:\JedAcademyCSharp\switchcase\switchcase\bin\Debug\net8.0\switchcase.pdb
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\switchcase.GeneratedMSBuildEditorConfig.editorconfig
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\switchcase.AssemblyInfoInputs.cache
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\switchcase.AssemblyInfo.cs
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\switchcase.csproj.CoreCompileInputs.cache
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\switchcase.sourcelink.json
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\switchcase.dll
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\refint\switchcase.dll
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\switchcase.pdb
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\switchcase.genruntimeconfig.cache
+D:\JedAcademyCSharp\switchcase\switchcase\obj\Debug\net8.0\ref\switchcase.dll
