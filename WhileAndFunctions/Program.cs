@@ -198,12 +198,6 @@ int[] newSortArray = MyFunctions.SortAlgorithm(arr2);
 
 
 
-//int index = Array.BinarySearch(arr, 5);
-//Console.WriteLine(index);
-//foreach (var item in arr)
-//{
-//    Console.WriteLine(item);
-//}
 
 bool turn = true;
 int x = 0;
