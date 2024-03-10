@@ -1,0 +1,15 @@
+D:\JedAcademyCSharp\Collections\Collections\bin\Debug\net8.0\Collections.exe
+D:\JedAcademyCSharp\Collections\Collections\bin\Debug\net8.0\Collections.deps.json
+D:\JedAcademyCSharp\Collections\Collections\bin\Debug\net8.0\Collections.runtimeconfig.json
+D:\JedAcademyCSharp\Collections\Collections\bin\Debug\net8.0\Collections.dll
+D:\JedAcademyCSharp\Collections\Collections\bin\Debug\net8.0\Collections.pdb
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\Collections.GeneratedMSBuildEditorConfig.editorconfig
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\Collections.AssemblyInfoInputs.cache
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\Collections.AssemblyInfo.cs
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\Collections.csproj.CoreCompileInputs.cache
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\Collections.sourcelink.json
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\Collections.dll
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\refint\Collections.dll
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\Collections.pdb
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\Collections.genruntimeconfig.cache
+D:\JedAcademyCSharp\Collections\Collections\obj\Debug\net8.0\ref\Collections.dll
