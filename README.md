@@ -101,3 +101,21 @@ cities[0] = "Naxçıvan";
 Console.WriteLine(cities2[0]); // Naxçıvan
 ```
 > `cities` arrayının heapdakı referansına ({"Bakı","Masallı","Sumqayıt"}) nə olacaq ? Bu zaman Garbage Collector dediyimiz obyekt heapda adresi olmayan bütün referansları siləcək.
+
+```
+
+## 6) Static metodlar nədir? ##
+> Static metodlar obyekt ilə deyil birbaşa sinifin adı ilə müraciət edilən metodlardır. Bu metodlar çağırılan zaman obyekt yaradılmadığından constructor işə düşməyəcək.
+> Static metodlar `static` açar sözü ilə yaradılır və yalnız static classlarda mövcud ola bilir.
+
+```
+public static class Math{
+  public static int Sum(int num1,int num2){
+    return num1+num2;
+  }
+}
+```
+> Çağırılan zaman aşağıdakı şəkildə sinifin adı ilə çağırılır.
+```
+Math.Sum(2,3);
+```
