@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "eqRtVdY19Fzh00Go2C8Skt+yqqjaFq/JP0BojxZTlOeGfAfpD1sspKPu00wJRWyBerK8F/fkz259v6AodiSAYA==",
+  "success": true,
+  "projectFilePath": "D:\\JedAcademyCSharp\\DecaratorPattern\\DecaratorPattern\\DecaratorPattern.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eiLink\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\eiLink\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\eiLink\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
