@@ -22,19 +22,20 @@ foreach (var animal in animals)
     animal.Say();
 }
 
-//foreach (var animal in animals)
-//{
-//    Console.WriteLine(animal.Info());
-//    //if (animal is Cat)
-//    //{
-//    //    ((Cat)animal).Jump();
-//    //}
-//    var newCat = animal as Cat;
-//    if (newCat != null)
-//    {
-//        newCat.Jump();
-//    }
-//}
+foreach (var animal in animals)
+{
+    Console.WriteLine(animal.Info());
+    if (animal is Cat castedCat)
+    {
+        //((Cat)animal).Jump();
+        castedCat.Jump();
+    }
+    var newCat = animal as Cat;
+    if (newCat != null)
+    {
+        newCat.Jump();
+    }
+}
 
 
 

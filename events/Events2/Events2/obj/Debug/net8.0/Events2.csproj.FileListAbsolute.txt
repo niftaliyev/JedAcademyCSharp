@@ -1,0 +1,15 @@
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\Events2.GeneratedMSBuildEditorConfig.editorconfig
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\Events2.AssemblyInfoInputs.cache
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\Events2.AssemblyInfo.cs
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\Events2.csproj.CoreCompileInputs.cache
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\Events2.sourcelink.json
+D:\JedAcademyCSharp\Events2\Events2\bin\Debug\net8.0\Events2.exe
+D:\JedAcademyCSharp\Events2\Events2\bin\Debug\net8.0\Events2.deps.json
+D:\JedAcademyCSharp\Events2\Events2\bin\Debug\net8.0\Events2.runtimeconfig.json
+D:\JedAcademyCSharp\Events2\Events2\bin\Debug\net8.0\Events2.dll
+D:\JedAcademyCSharp\Events2\Events2\bin\Debug\net8.0\Events2.pdb
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\Events2.dll
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\refint\Events2.dll
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\Events2.pdb
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\Events2.genruntimeconfig.cache
+D:\JedAcademyCSharp\Events2\Events2\obj\Debug\net8.0\ref\Events2.dll
