@@ -119,3 +119,232 @@ public static class Math{
 ```
 Math.Sum(2,3);
 ```
+
+## 5) OOP prinsipləri hansılardır? ##
+> Obyekt yönümlü proqramlaşdırmada 4 əsas prinsip mövcuddur.
+
+* Encapsulation (Kapsullama)
+* Inheritance (Mirasalma)
+* Abstraction (Mücərrədlik)
+* Polymorphism (Çox yönümlülük)
+
+***Encapsulation (Kapsullama)*** <br>
+Encapsulation siniflərdə yazdığımız dəyişənlərin əlçatılabilirliyini propertilər vasitəsilə məhdudlaşdırmaq və istifadəçilərin hər dəyişənə rahatlıqla çata
+bilməsinə maneə olmaq məqsədi ilə istifadə edilir.
+Məsələn, aşağıdakı nümunədə: 
+```
+ Person obj = new Person();
+ obj.age = 5;
+```
+`age` dəyişəninə 5 dəyərini mənimsətdik. Burada hər şey normal görsənir,yaxşı bəs əgər 5 deyil -5 mənimsətsəydik?
+Texniki baxımdan bunu etməyimiz heç bir xəta səbəbi olmayacaqdı,çünki `age` dəyişənimizin tipi `int`-dir və `int` mənfi dəyərlər ala bilir.
+Amma insanın yaşı mənfi ola bilməz. Belə halların qarşısını almaq üçün `age` dəyişənini kapsullayaq.
+
+```
+class Person{
+    private int age;
+    public int Age 
+    {
+      get{ return  age; } 
+      set
+      {
+        if(value > 0)
+          age = value;
+      }
+   } 
+}
+```
+Bildiyimiz kimi propertilerdeki set bloku dəyər mənimsədən zaman işə düşür,biz də həmin dəyərin 0-dan böyük olduğu vəziyyəti yoxlayıb neticeni ona görə qaytardıq,artıq bu halda istifadəçi `age` dəyişəninə mənfi dəyərlər mənimsədə bilməz (əks halda 0 nəticəsi alacağıq).
+
+***Inheritance (Mirasalma)*** <br>
+Bizim siniflərimiz sayca çox olacaq.Bənzər xüsusiyyətlərə sahib siniflərin içərisində eyni kodu təkrar-təkrar yazmaq yerinə həmin kodları üst sinifdən (Base class) miras almaq daha əlverişli olacaq.
+Məsələn,
+```
+class Employee{
+  public string eyeColor;
+  public string name;
+  public int age;
+}
+
+class Manager{
+  public string eyeColor;
+  public string name;
+  public int age;
+}
+
+
+```
+şəklində `Employee` və `Manager` sinifləri üçün dəyişənləri bu şəkildə yaratmağımızda heç bir problem yoxdur amma fikir verdinizsə eyni kodları yazdıq üstəlik bu xüsusiyyətlər işçi ya da menecer olmağından asılı olmayaraq hər bir insana aiddir. İndi isə bu kodları qısaldaq :
+```
+class Person{
+  public string eyeColor;
+  public string name;
+  public int age;
+}
+
+class Employee:Person{
+}
+
+class Manager:Person{
+}
+
+```
+daha əvvəl `Employee` və `Manager` siniflərində yazdığımız eyni kodların hər insana məxsus olduğunu demişdik,indi o dəyişənləri `Person` adında bir sinifə yazıb yuxarıdakı qayda ilə həm `Employee` həm də `Manager` siniflərində istifadə edə bilərik. Beləliklə, `Employee` və `Manager` sinifləri `Person` sinifindən onun xüsusiyyətlərini miras almış oldu.
+
+Onu da unutmayaq ki,alt siniflər (nümunədə `Employee` və `Manager`) yalnız bir __sinifdən__ miras ala bilər.
+
+***Abstraction (Mücərrədlik)*** <br>
+Abstract siniflər üst sinif (Base class) olaraq istifadə edilən mücərrəd siniflərdir. Abstract siniflərin bəzi xüsusiyyətlərinə baxaq.
+
+* Üst sinifdə var olan metod və propertilərin alt siniflərə görə müxtəlif cür işlədiyi vəziyyətlərdə istifadə olunur.
+* Bu siniflərdə _abstract_ açar sözü ilə işarələnən metodlar və propertilər onu miras alan alt siniflər tərəfindən mütləq implement olunmalıdır!
+* Abstract metodlar və propertilər abstract siniflərdə yazılmalıdır.
+* Abstract metodlar və propertilər private ola bilməz!
+* Abstract metodlar yazıldığı üst siniflərdə yalnız imza hissəsi ilə qeyd olunur. Onların tam hissəsi implement olunduqları alt siniflərdə yazılır. 
+* Abstract siniflərdə abstract olmayan metodlar da yazıla bilər.
+* Abstract siniflərdən obyekt yaradıla bilməz!
+
+Nümunə:
+```
+abstract class Car{
+  public abstract void Start();
+}
+
+class Audi:Car{
+ public override void Go()
+ {
+    throw new NotImplementedException();
+ }
+}
+
+```
+Baxmayaraq ki , abstract siniflərdən obyekt yaranmır amma onlar obyekt yaradarkən referans olaraq istifadə edilə bilir.
+```
+Car audi = new Audi();
+```
+
+***Polymorphism (Çox yönümlülük)*** <br>
+Üst sinifin referans , onun alt siniflərinin isə obyekt olaraq yaradıldığı vəziyyətdir.
+
+Məsələn:
+```
+  Animal a1 = new Bird();
+```
+bu nümunədə `Animal` sinifini üst sinif olaraq `Bird` sinifini isə onun alt sinifi olaraq düşünsək, yuxarıdakı kimi obyekt yaratmaq mümkündür.
+Amma bunun tərsi mümkün deyil, eyni ilə hər quşun heyvan olması,amma hər heyvanın quş olmaması kimi.
+```
+Bird a1 = new Animal(); //error
+```
+nümunələri artırmaq olar:
+```
+Animal a2 = new Tiger();
+Animal a3 = new Cat();
+```
+Burada üst sinif olan `Animal` hər obyektə görə müxtəlif davranış göstərir yəni çox yönümlü olur. 
+
+
+## 6) C#-da hansı növ siniflər (class) mövcuddur? ##
+> C#-da aşağıdakı növdə siniflər (class) mövcuddur:
+* Abstract class
+* Static class
+* Sealed class
+* Partial class
+
+(Hər biri haqqında ətraflı məlumat verilib)
+
+## 7) Abstract classlar və interfacelər arasındakı fərqlər nələrdir? ##
+
+Abstract class| Interface
+------------- | -------------
+Constructoru olur  | Constructoru olmur
+Static dəyərlər ala bilər | Static dəyərlər ala bilməz
+Abstract classlardakı elementlər bütün access modifierslərlə işlənə bilər (abstract metodlar private ola bilmaz) | Access modifiersi yalnız public ola bilər
+Bir sinif yalnız bir abstract classı miras ala bilər | Bir sinif birdən çox interfeysi miras ala bilər
+Bir çox sinif eyni tipdən və ortaq davranış göstərirsə abstract sinif base class olaraq istifadə edilər | Bir çox sinif yalnız ortaq metodlar istifadə edirsə interfeys istifadə etmək lazımdır
+Abstract classlar metod,properti,fields,consts və s. elementlər ala bilir | Interfeyslər yalnız metodlarla işlənir
+Abstract classdan miras alan alt siniflər yalnızca bu sinifdəki abstract açar sözlü metodları implement etmelidir | Interfeysdən miras alan siniflər interfeysin bütün metodlarını implement etmelidir
+
+## 8) Virtual metodlar nədir? ##
+> Bir metodun ``virtual`` açar sözü ilə işarələnməsi o metodun alt siniflərdə dəyişdirilib fərqli davranış göstərə biləcəyi mənasına gəlir.
+
+```
+ public class Car
+ {
+    public virtual void Start()
+    {
+        Console.WriteLine("Car started");
+    }
+ }
+
+ public class Audi : Car
+ {
+    public override void Start()
+    {
+        Console.WriteLine("Audi started");
+    }
+ }
+```
+> Yuxarıdakı nümunədə base classda olan `Start` metodu onun alt sinifində fərqli şəkildə davranış göstərdi, bunun üçün `override` açar sözündən istifadə etmək lazımdır.
+> Onu da unutmayaq ki, metodu `override` etmək kimi bir məcburiyyətimiz yoxdur,yəni `Start` metodunu `Audi` sinifində dəyişmək kimi bir məcburiyyətimiz yox idi.
+
+## 9) Metodun override edilməsi nədir? ##
+> Metodun override edilməsinə metodun əzilməsi də deyirlər, mənası da üst siniflərdə olan metodun alt siniflərdə dəyişdirilərək istifadə edilməsidir. 
+> Unutmayaq ki,yalnız `virtual` açar sözü ilə işarələnmiş metodları əzə (dəyişdirə) bilərik.
+
+## 10) Metodun overload edilməsi nədir? ##
+> Bu sual metodun override edilməsi ilə qarışdırılmamalıdır. Override metodu əzmək idisə, overload metodun artıq yüklənməsidir.
+> Yəni bir sinifdə var olan bir metodu həmin sinifdə eyni ad altında yenidən yarada bilərik amma necə?
+> Bunun üçün bəzi şərtlər var təbii ki birəbir eyni imza ilə 2 eyni metodu yarada bilmərik.
+
+```
+class Math{
+  public void Sum(int a,int b){
+    //code
+  }
+
+  public void Sum(int a,int b){ //error 2 eyni imzaya sahib metod ola bilməz
+    //code
+  }
+}
+```
+> O zaman nə edəcəyik,təbii ki, imzalarını dəyişdirəcəyik.
+> Məsələn, birinci metod 2 parametr alıbsa 2-ci Sum metodu 3 parametr ala bilər yaxud ilk metodun parametrləri `int` tipində olub 2-ci metodun parametrləri `double` ola bilər. Bu hallarda eyni ad ilə xəta almadan metodlarımızı yarada bilərik,buna da metodun overload edilməsi deyilir.
+
+```
+class Math{
+  void Sum(int a, int b)
+  {
+  //code
+  }
+  void Sum(int a, int b, int c)
+  {
+  //code
+  }
+}
+```
+yaxud
+```
+class Math{
+  void Sum(double a, double b)
+  {
+  //code
+  }
+  void Sum(int a, int b)
+  {
+  //code
+  }
+}
+```
+> hətta geri dönüş tipini də dəyişərək etmək mümkündür
+```
+class Math{
+  void Sum(double a, double b)
+  {
+  //code
+  }
+  int Sum(int a, int b)
+  {
+  //code
+  }
+}
+```
