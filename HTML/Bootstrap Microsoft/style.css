@@ -1,0 +1,7 @@
+.site-logo{
+    height: 30px;
+}
+.custom-carousel .carousel-inner img{
+    height: 400px;
+    object-fit: cover;
+}
