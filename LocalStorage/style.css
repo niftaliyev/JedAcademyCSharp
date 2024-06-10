@@ -1,0 +1,16 @@
+.light-theme{
+    background-color: whitesmoke;
+}
+.dark-theme{
+    background-color: black;
+}
+.light-theme *{
+   color: black;
+}
+.dark-theme *{
+    color: white;
+}
+
+i{
+    cursor: pointer;
+}
